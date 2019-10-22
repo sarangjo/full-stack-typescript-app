@@ -8,6 +8,7 @@ A template for a full-stack Typescript application with shared package.json and 
 - `loglevel` over `console.log`
 - `esModuleInterop`
 - Doesn't have all the webpack loaders
+- Yarn over NPM
 
 ## Downsides
 
