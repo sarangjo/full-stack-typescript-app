@@ -1,0 +1,44 @@
+{
+  "name": "full-stack-typescript-app",
+  "version": "1.0.0",
+  "description": "A full-stack Typescript app template with shared npm packages and TS configuration.",
+  "main": "index.js",
+  "repository": "git@github.com:sarangjo/full-stack-typescript-app",
+  "author": "Sarang Joshi <sarangj@msn.com>",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "@types/express": "^4.17.1",
+    "@types/loglevel": "^1.6.3",
+    "@types/react": "^16.9.9",
+    "@types/react-dom": "^16.9.2",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^3.2.0",
+    "html-webpack-plugin": "^3.2.0",
+    "style-loader": "^1.0.0",
+    "ts-loader": "^6.2.0",
+    "ts-node-dev": "^1.0.0-pre.43",
+    "tslint": "^5.20.0",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.6.4",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.9.0"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "loglevel": "^1.6.4",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0"
+  },
+  "scripts": {
+    "start:server": "tsnd --respawn --project tsconfig.server.json src/server/server.ts",
+    "start:client": "webpack-dev-server -d",
+    "start": "run-p start:server start:client",
+    "build:server": "tsc --project tsconfig.server.json",
+    "build:client": "webpack --mode=production",
+    "build": "run-p build:server build:client",
+    "lint": "tslint -p tsconfig.json",
+    "prettify": "prettier --config .prettierrc --write 'src/**/*.{ts,tsx,css}'"
+  }
+}
