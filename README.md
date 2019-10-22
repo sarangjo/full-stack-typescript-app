@@ -10,10 +10,6 @@ A template for a full-stack Typescript application with shared package.json and 
 - Doesn't have all the webpack loaders
 - Yarn over NPM
 
-## Downsides
-
-- Post-ejected CRA
-
 ## Issues
 
 - `baseUrl`/`paths` doesn't work on built server because we don't use webpack. Works fine when developing
